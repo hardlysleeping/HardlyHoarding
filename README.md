@@ -11,7 +11,7 @@ AI-generated, the download engines are not.
 
 | Project | Hoards | About |
 |---|---|---|
-| **[HardlyReading](https://github.com/hardlysleeping/HardlyReading)** | Magazines, comics and PDFs from [Internet Archive](https://archive.org) | Paste a collection, item or search; downloads one good file per issue, verifies it, and names it for a comics server. Has a library and a basic CBZ/PDF reader. |
+| **[HardlyReader](https://github.com/hardlysleeping/HardlyReader)** | Magazines, comics and PDFs from [Internet Archive](https://archive.org) | Paste a collection, item or search; downloads one good file per issue, verifies it, and names it for a comics server. Has a library and a basic CBZ/PDF reader. |
 | **[HardlyWatching](https://github.com/hardlysleeping/HardlyWatching)** | Instagram and TikTok profiles | Persistent queue for hundreds of profiles, paced with auto-resume after rate limits. Gallery and timeline to browse what you kept. |
 
 ---
@@ -20,7 +20,7 @@ AI-generated, the download engines are not.
 
 Neither app reimplements downloading. Each is a UI over a tool that already works.
 
-**HardlyReading** — [Internet Archive](https://archive.org) for search, metadata and files, and
+**HardlyReader** — [Internet Archive](https://archive.org) for search, metadata and files, and
 [aria2c](https://github.com/aria2/aria2) as the downloader.
 
 **HardlyWatching** — [instaloader](https://instaloader.github.io/) for Instagram posts and profiles,
@@ -29,7 +29,7 @@ Neither app reimplements downloading. Each is a UI over a tool that already work
 
 ---
 
-## HardlyReading
+## HardlyReader
 
 **Grab whole collections from Internet Archive and read them.**
 
@@ -50,7 +50,7 @@ against archive.org's checksum.
 
 **Needs:** Python 3.8+ and `aria2c`. Start with `python run.py`.
 
-→ **[Documentation and source](https://github.com/hardlysleeping/HardlyReading)**
+→ **[Documentation and source](https://github.com/hardlysleeping/HardlyReader)**
 
 ---
 
