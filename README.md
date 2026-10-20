@@ -12,7 +12,7 @@ AI-generated, the download engines are not.
 | Project | Hoards | About |
 |---|---|---|
 | **[HardlyReader](https://github.com/hardlysleeping/HardlyReader)** | Magazines, comics and PDFs from [Internet Archive](https://archive.org) | Paste a collection, item or search; downloads one good file per issue, verifies it, and names it for a comics server. Has a library and a basic CBZ/PDF reader. |
-| **[hardlywatching](https://github.com/hardlysleeping/hardlywatching)** | Instagram and TikTok profiles | Persistent queue for hundreds of profiles, paced with auto-resume after rate limits. Gallery and timeline to browse what you kept. |
+| **[HardlyWatching](https://github.com/hardlysleeping/HardlyWatching)** | Instagram and TikTok profiles | Persistent queue for hundreds of profiles, paced with auto-resume after rate limits. Gallery and timeline to browse what you kept. |
 
 ---
 
@@ -23,7 +23,7 @@ Neither app reimplements downloading. Each is a UI over a tool that already work
 **HardlyReader** — [Internet Archive](https://archive.org) for search, metadata and files, and
 [aria2c](https://github.com/aria2/aria2) as the downloader.
 
-**hardlywatching** — [instaloader](https://instaloader.github.io/) for Instagram posts and profiles,
+**HardlyWatching** — [instaloader](https://instaloader.github.io/) for Instagram posts and profiles,
 [yt-dlp](https://github.com/yt-dlp/yt-dlp) for video, and
 [ffmpeg](https://ffmpeg.org/) for media handling.
 
@@ -54,7 +54,7 @@ against archive.org's checksum.
 
 ---
 
-## hardlywatching
+## HardlyWatching
 
 **Paste 200 profiles once and let them drain over days.**
 
@@ -77,7 +77,7 @@ auto-resume, and a gallery to browse what you kept.
 > **Use at your own risk.** Downloading at scale can get your IP blocked, rate limited,
 > or your account banned. Check the terms of any service you point these at.
 
-→ **[Documentation and source](https://github.com/hardlysleeping/hardlywatching)**
+→ **[Documentation and source](https://github.com/hardlysleeping/HardlyWatching)**
 
 ---
 
