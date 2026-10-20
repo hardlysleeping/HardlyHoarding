@@ -1,6 +1,6 @@
 # HardlyHoarding
 
-> ### Self-hosted tools for hoarding media you want to keep.
+> ## HOARD MEDIA.
 >
 > Everything runs on your own machine. Local web UI, local files, no account,
 > no cloud, no telemetry — and a queue that survives reboots instead of a
