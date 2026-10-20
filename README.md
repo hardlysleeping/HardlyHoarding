@@ -1,92 +1,95 @@
-# HardlyHoarding
+<h1 align="center">HardlyHoarding</h1>
 
-> ## HOARD MEDIA.
->
-> Everything runs on your own machine. Local web UI, local files, no account,
-> no cloud, no telemetry — and a queue that survives reboots instead of a
-> folder of half-finished downloads.
-
-Two projects, each standalone:
-
-| | Project | What it hoards | Stack |
-|---|---|---|---|
-| 🐴 | **[HardlyReader](https://github.com/hardlysleeping/HardlyReader)** | Magazines, comics and PDFs from Internet Archive | Python stdlib + aria2c |
-| 📥 | **[insta-desktop](https://github.com/hardlysleeping/insta-desktop)** | Instagram and TikTok profiles | Python + instaloader + yt-dlp |
-
-Both are web UIs you open in a browser. Neither reimplements a downloader:
-HardlyReader drives `aria2c`, insta-desktop drives `instaloader` and `yt-dlp`.
+<p align="center"><em>For your media hoarding needs.<br>
+Local web UIs over stable, battle-tested downloaders. No accounts, no cloud, no telemetry.</em></p>
 
 ---
 
-## 🐴 HardlyReader
+Two projects, each in its own public repo. Both are single-user web UIs that run on
+your own machine and drive a mature CLI tool underneath — the frontends are
+AI-generated, the download engines are not.
+
+| Project | Hoards | About |
+|---|---|---|
+| **[HardlyReader](https://github.com/hardlysleeping/HardlyReader)** | Magazines, comics and PDFs from [Internet Archive](https://archive.org) | Paste a collection, item or search; downloads one good file per issue, verifies it, and names it for a comics server. Has a library and a basic CBZ/PDF reader. |
+| **[insta-desktop](https://github.com/hardlysleeping/insta-desktop)** | Instagram and TikTok profiles | Persistent queue for hundreds of profiles, paced with auto-resume after rate limits. Gallery and timeline to browse what you kept. |
+
+---
+
+## Backends
+
+Neither app reimplements downloading. Each is a UI over a tool that already works.
+
+**HardlyReader** — [Internet Archive](https://archive.org) for search, metadata and files, and
+[aria2c](https://github.com/aria2/aria2) as the downloader.
+
+**insta-desktop** — [instaloader](https://instaloader.github.io/) for Instagram posts and profiles,
+[yt-dlp](https://github.com/yt-dlp/yt-dlp) for video, and
+[ffmpeg](https://ffmpeg.org/) for media handling.
+
+---
+
+## HardlyReader
 
 **Grab whole collections from Internet Archive and read them.**
 
-Paste a collection link, an item link, or search in-app. It resolves every
-member, downloads one good file per issue — **CBZ/CBR first, then PDF** —
-verifies each one against archive.org's checksum, and files it into a
-Komga-compatible folder. Then it lets you read them.
+Paste a collection link, an item link, or search in-app. It resolves every member,
+downloads one good file per issue — **CBZ/CBR first, then PDF** — and verifies each
+against archive.org's checksum.
 
 <img src="docs/search.png" width="820" alt="Searching Internet Archive">
 
-- **Collections, items and searches** — paste or search; collections pull every member
-- **Best file per issue** — CBR → CBZ → image-PDF → text-PDF, originals preferred
-- **Verified downloads** — byte + MD5 against archive.org, because it sometimes serves an error page with HTTP 200
+- **Best file per issue** — CBR → CBZ → image-PDF → text-PDF
+- **Verified** — byte and MD5 check, because archive.org sometimes serves an error page with HTTP 200
 - **Resumable** — restart mid-download and it continues; finished files are skipped
-- **Retry with backoff** — 15m → 1h → 3h → 8h, and genuinely missing items are marked unavailable rather than retried forever
-- **Komga-ready** — one folder per series, `<Series> NNN (Year).ext` so files sort in reading order
-- **Library and reader** — CBZ and PDF, with reading position kept server-side in SQLite so it follows you between devices
+- **Retry with backoff** — 15m → 1h → 3h → 8h; genuinely missing items are marked unavailable
+- **Komga-ready naming** — one folder per series, `<Series> NNN (Year).ext`, in reading order
+- **Built-in reader** — CBZ and PDF, position saved server-side so it follows you between devices
 
 <img src="docs/reader.png" width="820" alt="Reading a CBZ">
 
-**Requirements:** Python 3.8+ and [`aria2c`](https://github.com/aria2/aria2/releases).
-Run it with `python run.py`.
+**Needs:** Python 3.8+ and `aria2c`. Start with `python run.py`.
 
-→ **[Full documentation](https://github.com/hardlysleeping/HardlyReader)**
+→ **[Documentation and source](https://github.com/hardlysleeping/HardlyReader)**
 
 ---
 
-## 📥 insta-desktop
+## insta-desktop
 
 **Paste 200 profiles once and let them drain over days.**
 
 A browser interface for instaloader and yt-dlp. Persistent queue, pacing,
-auto-resume after rate limits, and a gallery to browse what you kept —
-including a timeline view and your own phone uploads alongside the
-downloaded profiles.
+auto-resume, and a gallery to browse what you kept.
 
 <img src="docs/gallery.png" width="820" alt="Instagram profile gallery">
 
-- **Persistent queue** — survives reboots, drains one profile at a time with pacing
+- **Persistent queue** — survives reboots, drains one profile at a time
 - **Auto-resume** — rate limits pause the queue instead of failing it
-- **Gallery and timeline** — browse by profile or by date, favourites, filters
-- **Your own photos too** — any folder appears as a profile, so phone uploads browse in the same grid
+- **Gallery and timeline** — browse by profile or by date, with favourites and filters
+- **Any folder is a profile** — phone uploads browse in the same grid
 - **Recoverable removals** — deleting never loses anything; restore from the Removed list
 - **Reels as a separate pass** — optionally queue reels as their own follow-up job
 
 <img src="docs/timeline.png" width="820" alt="Timeline view">
 
-**Requirements:** Python, [`instaloader`](https://instaloader.github.io/),
-[`yt-dlp`](https://github.com/yt-dlp/yt-dlp) and `ffmpeg`.
+**Needs:** Python, `instaloader`, `yt-dlp` and `ffmpeg`.
 
-> **Use at your own risk.** Downloading at scale can get your IP blocked,
-> rate limited, or your account banned. Check the terms of any service you
-> point these at.
+> **Use at your own risk.** Downloading at scale can get your IP blocked, rate limited,
+> or your account banned. Check the terms of any service you point these at.
 
-→ **[Full documentation](https://github.com/hardlysleeping/insta-desktop)**
+→ **[Documentation and source](https://github.com/hardlysleeping/insta-desktop)**
 
 ---
 
 ## Why two repos
 
-They share a philosophy, not a codebase. One talks to a public archive with an
-open API; the other drives two mature CLI downloaders against services that
-rate limit and ban. Merging them would mean one install dragging in
-dependencies the other does not need. Keep them separate; this repo is the
-shelf they sit on.
+One talks to a public archive with an open API and no login. The other drives two
+CLI tools against services that rate limit and ban. Merging them would make each
+install drag in dependencies it does not need, so they stay separate — this repo is
+the index.
 
-Neither project redistributes anything. What you download is your
-responsibility — check the rights on anything you grab.
+Neither project redistributes anything. What you download is your responsibility;
+check the rights on anything you keep.
 
 ## License
 
