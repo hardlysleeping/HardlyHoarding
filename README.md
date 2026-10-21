@@ -47,11 +47,18 @@ against archive.org's checksum.
 - **Built-in reader** — CBZ and PDF, position saved server-side so it follows you between devices
 - **Read without downloading** — stream a book's pages from archive.org, same reader, same saved place
 - **A library worth browsing** — cover grid or list, filter chips, favourites, descriptions fetched from the item's own record
-- **A queue that shows its work** — Downloading now / Needs attention / Waiting / Finished, with every file in flight listed
+- **A queue that shows its work** — Downloading now / Paused / Needs attention / Waiting / Finished, with every file in flight listed
+- **Reorder the queue** — push a job to the top, to the bottom, or one place up or down; the numbers are the run order
+- **Take as many issues as you want** — pick a count and start from the first issue or the newest; the rest never enter the queue
+- **Pauses instead of filling your disk** — if the next file will not fit, the job stops with the numbers and resumes when you free space
 
 | Library | Queue |
 |---|---|
-| <img src="docs/library.png" width="400" alt="Library cover grid"> | <img src="docs/queue.png" width="400" alt="Download queue"> |
+| <img src="docs/library.png" width="400" alt="Library cover grid"> | <img src="docs/queue.png" width="400" alt="Download queue with reorder controls"> |
+
+How many issues to take, and from which end:
+
+<img src="docs/add.png" width="820" alt="Choosing how many issues from a collection">
 
 <img src="docs/reader.png" width="820" alt="Reading a PDF">
 
