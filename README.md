@@ -11,7 +11,7 @@ AI-generated, the download engines are not.
 
 | Project | Hoards | About |
 |---|---|---|
-| **[HardlyReading](https://github.com/hardlysleeping/HardlyReading)** | Magazines, comics and PDFs from [Internet Archive](https://archive.org) | Paste a collection, item or search; downloads one good file per issue, verifies it, and names it for a comics server. Has a library and a basic CBZ/PDF reader. |
+| **[HardlyReading](https://github.com/hardlysleeping/HardlyReading)** | Magazines, comics and PDFs from [Internet Archive](https://archive.org) | Paste a collection, item or search; downloads one good file per issue, verifies it, and names it for a comics server. Library with cover grid, filters and favourites, plus a CBZ/PDF reader that can also stream pages without downloading. |
 | **[HardlyWatching](https://github.com/hardlysleeping/HardlyWatching)** | Instagram and TikTok profiles | Persistent queue for hundreds of profiles, paced with auto-resume after rate limits. Gallery and timeline to browse what you kept. |
 
 ---
@@ -45,8 +45,15 @@ against archive.org's checksum.
 - **Retry with backoff** — 15m → 1h → 3h → 8h; genuinely missing items are marked unavailable
 - **Komga-ready naming** — one folder per series, `<Series> NNN (Year).ext`, in reading order
 - **Built-in reader** — CBZ and PDF, position saved server-side so it follows you between devices
+- **Read without downloading** — stream a book's pages from archive.org, same reader, same saved place
+- **A library worth browsing** — cover grid or list, filter chips, favourites, descriptions fetched from the item's own record
+- **A queue that shows its work** — Downloading now / Needs attention / Waiting / Finished, with every file in flight listed
 
-<img src="docs/reader.png" width="820" alt="Reading a CBZ">
+| Library | Queue |
+|---|---|
+| <img src="docs/library.png" width="400" alt="Library cover grid"> | <img src="docs/queue.png" width="400" alt="Download queue"> |
+
+<img src="docs/reader.png" width="820" alt="Reading a PDF">
 
 **Needs:** Python 3.8+ and `aria2c`. Start with `python run.py`.
 
