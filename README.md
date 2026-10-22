@@ -50,7 +50,9 @@ against archive.org's checksum.
 - **A queue that shows its work** — Downloading now / Paused / Needs attention / Waiting / Finished, with every file in flight listed
 - **Reorder the queue** — push a job to the top, to the bottom, or one place up or down; the numbers are the run order
 - **Take as many issues as you want** — pick a count and start from the first issue or the newest; the rest never enter the queue
+- **Several jobs at once** — 1 to 4, with the file budget shared between them
 - **Pauses instead of filling your disk** — if the next file will not fit, the job stops with the numbers and resumes when you free space
+- **A disk panel that tells you where you stand** — used and free space, cache size, one button to clear it
 
 | Library | Queue |
 |---|---|
@@ -59,6 +61,10 @@ against archive.org's checksum.
 How many issues to take, and from which end:
 
 <img src="docs/add.png" width="820" alt="Choosing how many issues from a collection">
+
+Settings covers concurrency, the space kept free, and how full your disk is:
+
+<img src="docs/settings.png" width="820" alt="Settings: jobs at once, disk usage, caches">
 
 <img src="docs/reader.png" width="820" alt="Reading a PDF">
 
