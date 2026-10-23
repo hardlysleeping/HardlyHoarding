@@ -12,7 +12,7 @@ AI-generated, the download engines are not.
 | Project | Hoards | About |
 |---|---|---|
 | **[HardlyReading](https://github.com/hardlysleeping/HardlyReading)** | Magazines, comics and PDFs from [Internet Archive](https://archive.org) | Paste a collection, item or search; downloads one good file per issue, verifies it, and names it for a comics server. Library with cover grid, filters and favourites, plus a CBZ/PDF reader that can also stream pages without downloading. |
-| **[HardlyWatching](https://github.com/hardlysleeping/HardlyWatching)** | Instagram and TikTok profiles | Persistent queue for hundreds of profiles, paced with auto-resume after rate limits. Gallery and timeline to browse what you kept. |
+| **[HardlyWatching](https://github.com/hardlysleeping/HardlyWatching)** | Instagram and TikTok profiles | Persistent queue for hundreds of profiles, paced with auto-resume after rate limits. Gallery, timeline, bookmarks with categories, and a phone-sized Shorts feed. |
 
 ---
 
@@ -81,16 +81,24 @@ Settings covers concurrency, the space kept free, and how full your disk is:
 A browser interface for instaloader and yt-dlp. Persistent queue, pacing,
 auto-resume, and a gallery to browse what you kept.
 
-<img src="docs/gallery.png" width="820" alt="Instagram profile gallery">
+<img src="docs/gallery.png" width="820" alt="Profile gallery, with Liked, Bookmarks, All Trash and Timeline">
 
 - **Persistent queue** — survives reboots, drains one profile at a time
 - **Auto-resume** — rate limits pause the queue instead of failing it
-- **Gallery and timeline** — browse by profile or by date, with favourites and filters
+- **Two kinds of keeping** — a heart is *Liked*, a bookmark is *find this again*; bookmarks carry categories you name
+- **Gallery and timeline** — browse by profile or by date, with filters and pick-several-then-act
+- **Shorts** — a full-screen feed of reels and TikTok videos, installable to a phone home screen
 - **Any folder is a profile** — phone uploads browse in the same grid
 - **Recoverable removals** — deleting never loses anything; restore from the Removed list
 - **Reels as a separate pass** — optionally queue reels as their own follow-up job
 
-<img src="docs/timeline.png" width="820" alt="Timeline view">
+| Timeline | Bookmarks |
+|---|---|
+| <img src="docs/timeline.png" width="400" alt="Timeline view"> | <img src="docs/bookmarks.png" width="400" alt="Bookmarks with category chips"> |
+
+| Queue | TikTok | Shorts |
+|---|---|---|
+| <img src="docs/hw-queue.png" width="260" alt="Download queue"> | <img src="docs/hw-tiktok.png" width="260" alt="TikTok queue with grab-count controls"> | <img src="docs/hw-shorts.png" width="130" alt="Shorts feed"> |
 
 **Needs:** Python, `instaloader`, `yt-dlp` and `ffmpeg`.
 
@@ -113,7 +121,7 @@ check the rights on anything you keep.
 
 ## License
 
-GPL-3.0
+PolyForm Noncommercial 1.0.0 — see [LICENSE](LICENSE). Each project keeps its own licence in its own repo.
 
 ## Support
 
