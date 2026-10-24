@@ -39,6 +39,7 @@ against archive.org's checksum.
 
 <img src="docs/search.png" width="820" alt="Searching Internet Archive">
 
+- **Pick inside a collection** — clicking one in search lists its issues in the pane; read or download one, or take everything above/below an anchor issue
 - **Best file per issue** — CBR → CBZ → image-PDF → text-PDF
 - **Verified** — byte and MD5 check, because archive.org sometimes serves an error page with HTTP 200
 - **Resumable** — restart mid-download and it continues; finished files are skipped
